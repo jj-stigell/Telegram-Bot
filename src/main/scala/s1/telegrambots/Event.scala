@@ -28,7 +28,7 @@ class Event(private val tapahtumatunnus: String, private val tapahtumanNimi: Str
     this.ilmoittautuneideMaara -= 1
     if(this.ilmoittautuneidenJono.nonEmpty) {
       this.tapahtumaanIlmoittautuneet.append(ilmoittautuneidenJono.head)
-      s"${ilmoittautuneidenJono.head} on lisätty tapahtumaan."
+      println(s"${ilmoittautuneidenJono.head} on lisätty tapahtumaan.")
       this.ilmoittautuneideMaara += 1
       this.ilmoittautuneidenJono.remove(0)
     }
