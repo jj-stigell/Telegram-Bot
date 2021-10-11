@@ -85,7 +85,8 @@ object EventRegister extends App {
       } else if (onkoTilaa(tunnus, this.getUserFirstName(msg))) {
         "Tapahtumassa on tilaa, lisäsin sinut."
       } else {
-        "Sori tapahtuma on täynnä."
+      event.lisaaHenkilo(this.getUserFirstName(msg))
+        "Sori tapahtuma on täynnä. Olet varasijalla."
       }
     }
 
