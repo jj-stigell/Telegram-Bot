@@ -27,7 +27,7 @@ class Event(private val tapahtumatunnus: String, private val tapahtumanNimi: Str
     this.tapahtumaanIlmoittautuneet.remove(this.tapahtumaanIlmoittautuneet.indexOf(henkilo))
     this.ilmoittautuneideMaara -= 1
     if(this.ilmoittautuneidenJono.nonEmpty) {
-      this.tapahtumaanIlmoittautuneet.append(ilmoittautuneidenJono(0))
+      this.tapahtumaanIlmoittautuneet.append(ilmoittautuneidenJono.head)
       this.ilmoittautuneideMaara += 1
       this.ilmoittautuneidenJono.remove(0)
     }
