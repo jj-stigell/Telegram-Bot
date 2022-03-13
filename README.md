@@ -1,34 +1,28 @@
-# Telegram Bots
+# Telegram Event organizing and registering bot
 
-This projects serves as a means of testing and developing Telegram bots for Programming Studio 1 2021 exercise
-
-Your bot will *inherit* a Basic Bot, which gives you a list of useful commands:
-
-https://version.aalto.fi/gitlab/studio-1-2021/botti_2021/-/blob/master/src/main/scala/s1/telegrambots/BasicBot.scala
-
-**You don't need to understand how the methods are implemented.**
-
-For the absolute simplest example of how that bot base can be used, check out the Reverse-bot.
-If defines a simple method that takes a String parameter and returns that String reversed.
-The bot is then told to run that method any time any text is written to the chat.
-
-see the example here:
-
-https://version.aalto.fi/gitlab/studio-1-2021/botti_2021/-/blob/master/src/main/scala/s1/telegrambots/examples/ReverseBot.scala
+Simple bot for creating events where user can sign up. Limits can be se how many people are allowed to participate.
+Small project part of the programming studio course @Aalto University Finland.
+The exercise base uses the **Bot4s** -library by Alfonso Peterssen.
 
 
+## TODO:
+
+- Add error handling for invalid input
+- Save event information for JSON in case of bot crashes, now information stored to buffer. Info lost on reboot/crash
+- Better unique identification of users, instead of name (obvious problem with duplicates).
+- Tests
+
+
+## Run
+
+- get bot token by creating a new telegram bot using the BotFather in Telegram
+- add bot token to the root directory in bot_token.txt file
+- start from sbt shell
+- command: run
+- Find bot from the telegram and start chatting, you can add it to existing groups
 
 ## Bot token
 
 You need to create a file called **bot_token.txt** which contains your bot_token and place it in the root directory for the code to work. The token is given to you by the BotFather -bot in Telegram.
 
 The **bot_token.txt** -file should never be pushed into the repository for safety reasons. Our .gitignore -file should prevent this from happening.
-
-## Bot4s
-
-The exercise base uses the **Bot4s** -library by Alfonso Peterssen.
-You don't need to use the library directly if you use the course-provided helper functions, but in case you want to go further, check out the examples and documentation of that project.
-
-## Remember to ask your teaching assistant and make use of the exercise groups!
-
-But even more importantly - Discuss with your Teaching assistant if you think of a cool feature, but dont't know how to implement it. This course is all about collaboration and learning from others - We can figure out solutions together.

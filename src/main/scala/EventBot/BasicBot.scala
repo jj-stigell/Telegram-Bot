@@ -1,16 +1,14 @@
-package s1.telegrambots
+package EventBot
+
+import com.bot4s.telegram._
+import com.bot4s.telegram.api.declarative.{Callbacks, Commands}
+import com.bot4s.telegram.api.{ChatActions, RequestHandler}
+import com.bot4s.telegram.clients.ScalajHttpClient
+import com.bot4s.telegram.future.{Polling, TelegramBot}
+import com.bot4s.telegram.methods._
+import com.bot4s.telegram.models._
 
 import scala.concurrent.Future
-
-import com.bot4s.telegram.future.{Polling, TelegramBot}
-import com.bot4s.telegram.api.declarative.{Commands, Callbacks}
-import com.bot4s.telegram.api.RequestHandler
-import com.bot4s.telegram.clients.ScalajHttpClient
-
-import com.bot4s.telegram.api.ChatActions
-import com.bot4s.telegram._
-import com.bot4s.telegram.methods.{SendMessage, _}
-import com.bot4s.telegram.models.{InlineKeyboardButton, InlineKeyboardMarkup, InputFile, _}
 
 /**
   * A wrapper class that wraps more complicated or advanced functionality such as loading images and making
