@@ -77,16 +77,17 @@ object EventRegister extends App {
       */
     def register(msg: Message): String = {
       val identifier = this.getString(msg).split(" ")(0)
+      val event = this.allEvents.filter(event => event.eventIdentifier == identifier).head
 
       if (!eventExists(identifier)) {
         "Event not found."
       } else if (registered(identifier, this.getUserFirstName(msg))) {
         "You have already signed up for this event."
       } else if (openSeats(identifier)) {
-        val event = this.allEvents.filter(event => event.eventIdentifier == identifier).head
         event.addPerson(this.getUserFirstName(msg))
         "Event has open seats, I added you!"
       } else {
+        event.addPerson(this.getUserFirstName(msg))
         "Sorry, event is full. I added you to the line."
       }
     }
