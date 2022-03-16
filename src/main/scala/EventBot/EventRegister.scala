@@ -41,7 +41,7 @@ object EventRegister extends App {
       * @return String with all events
       */
     def listEvents(msg: Message): String =
-      this.allEvents.map(event => s"Tapahtuman identifier: ${event.eventIdentifier}, nimi: ${event.name}, paikkamäärä: ${event.registeredSeats}/${event.seats}\n")
+      this.allEvents.map(event => s"Event identifier: ${event.eventIdentifier}, event name: ${event.name}, seats: ${event.registeredSeats}/${event.seats}\n")
         .mkString
 
     /**
